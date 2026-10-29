@@ -7,6 +7,8 @@ import { blueprintSize } from "@/lib/engine/selection";
 import { db } from "@/lib/db/pool";
 import { StartPanel } from "@/components/assessment/start-panel";
 import { Card, Notice } from "@/components/ui/card";
+import { diagnose } from "@/lib/diagnostics";
+import { DiagnosisList } from "@/components/setup/diagnosis-list";
 
 export const metadata: Metadata = {
   title: "Iniciar avaliação",
@@ -17,7 +19,25 @@ export const dynamic = "force-dynamic";
 
 export default async function StartPage() {
   const owner = await getOwner();
-  const [active, version] = await Promise.all([findActiveAttempt(owner), getActiveTestVersion(db)]);
+  let active: string | null;
+  let version: Awaited<ReturnType<typeof getActiveTestVersion>>;
+  try {
+    [active, version] = await Promise.all([findActiveAttempt(owner), getActiveTestVersion(db)]);
+  } catch (err) {
+    // Em vez de uma página de erro genérica, mostra o que falta configurar.
+    console.error("[avaliacao] falha ao acessar o banco:", (err as Error).message);
+    const diagnosis = await diagnose();
+    return (
+      <div className="container max-w-3xl space-y-6 py-12 sm:py-16">
+        <h1 className="font-display text-4xl sm:text-5xl">Avaliação indisponível no momento</h1>
+        <Notice tone="bad" title="O site não conseguiu acessar o banco de dados">
+          Se você é o responsável pelo site, veja abaixo o que corrigir. Depois de alterar variáveis na Vercel, faça Redeploy.
+        </Notice>
+        <DiagnosisList diagnosis={diagnosis} />
+        <p className="text-sm text-muted">Diagnóstico completo em <Link href="/status" className="text-accent underline">/status</Link>.</p>
+      </div>
+    );
+  }
   const size = version ? blueprintSize(version.blueprint) : null;
   const minutes = version ? Math.round(version.timeLimitSeconds / 60) : null;
 

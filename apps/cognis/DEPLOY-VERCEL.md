@@ -54,8 +54,8 @@ Você não precisa instalar nada no computador se usar o caminho A da etapa 2.
 
 ## Etapa 3 — Teste final
 
-1. Abra `https://SEU-ENDERECO/api/health`. Deve mostrar `{"ok":true,"database":"up"}`.
-   Se aparecer `"down"`, a `DATABASE_URL` está errada (confira a senha e a porta 6543).
+1. Abra `https://SEU-ENDERECO/status`. A página verifica as variáveis e o banco e diz, em português, o que
+   corrigir. Tudo deve aparecer como OK (avisos em amarelo não impedem o funcionamento da avaliação).
 2. Abra o site, clique em **Começar avaliação** e responda algumas questões.
 3. Em **Entrar → Criar conta**, cadastre-se com o e-mail de `ADMIN_EMAILS`. O Supabase envia um e-mail de
    confirmação; depois de confirmar, entre e acesse `/admin`.
@@ -64,7 +64,7 @@ Você não precisa instalar nada no computador se usar o caminho A da etapa 2.
 
 | Sintoma | Causa e solução |
 |---|---|
-| `/api/health` mostra `down` | `DATABASE_URL` errada: use o **Transaction pooler** (porta 6543) e a senha correta, sem colchetes. |
+| Erro com "Código: …" ou `/status` mostra erro na conexão | `DATABASE_URL` errada: use o **Transaction pooler** (porta 6543) e a senha correta, sem colchetes. |
 | "Nenhuma versão da avaliação está ativa" | O `setup-completo.sql` não foi executado. Rode-o no SQL Editor. |
 | Link de confirmação de e-mail dá erro | Falta `https://SEU-ENDERECO/auth/confirm` nas Redirect URLs do Supabase. |
 | Não consigo acessar `/admin` | O e-mail da conta precisa estar em `ADMIN_EMAILS`; depois de alterar, faça Redeploy e entre de novo. |

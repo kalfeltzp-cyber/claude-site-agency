@@ -20,6 +20,9 @@ export default function ErrorPage({ error, reset }: { error: Error & { digest?: 
         <ButtonLink href="/" variant="secondary">
           Página inicial
         </ButtonLink>
+        <ButtonLink href="/status" variant="ghost">
+          Ver diagnóstico
+        </ButtonLink>
       </div>
     </main>
   );

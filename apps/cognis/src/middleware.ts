@@ -11,17 +11,23 @@ export async function middleware(request: NextRequest) {
   if (!url || !key) return NextResponse.next();
 
   let response = NextResponse.next({ request });
-  const supabase = createServerClient(url, key, {
-    cookies: {
-      getAll: () => request.cookies.getAll(),
-      setAll: (list) => {
-        for (const { name, value } of list) request.cookies.set(name, value);
-        response = NextResponse.next({ request });
-        for (const { name, value, options } of list) response.cookies.set(name, value, options);
+  try {
+    const supabase = createServerClient(url, key, {
+      cookies: {
+        getAll: () => request.cookies.getAll(),
+        setAll: (list) => {
+          for (const { name, value } of list) request.cookies.set(name, value);
+          response = NextResponse.next({ request });
+          for (const { name, value, options } of list) response.cookies.set(name, value, options);
+        },
       },
-    },
-  });
-  await supabase.auth.getUser();
+    });
+    await supabase.auth.getUser();
+  } catch (err) {
+    // Configuração inválida do Supabase não pode derrubar o site inteiro; /status mostra o problema.
+    console.error("[middleware] falha ao renovar sessão:", (err as Error).message);
+    return NextResponse.next({ request });
+  }
   return response;
 }
 
