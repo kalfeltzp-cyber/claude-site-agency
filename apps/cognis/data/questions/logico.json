@@ -1,0 +1,73 @@
+{
+  "category": "logico",
+  "defaults": {
+    "status": "reviewed",
+    "quality": { "reviewStatus": "author_reviewed", "reviewedAt": "2026-10-29", "notes": "Todas as hipóteses testadas exaustivamente; solução única confirmada. Sem calibração empírica.", "empiricallyCalibrated": false }
+  },
+  "questions": [
+    {
+      "id": "log-001", "difficulty": 1, "format": "text", "recommendedSeconds": 30,
+      "prompt": "Ana é mais alta que Bia. Bia é mais alta que Carla. Quem é a mais baixa das três?",
+      "options": [{"id":"a","text":"Ana"},{"id":"b","text":"Bia"},{"id":"c","text":"Carla"},{"id":"d","text":"Ana e Carla têm a mesma altura"},{"id":"e","text":"Não é possível determinar"}],
+      "answer": "c",
+      "explanation": "Ana > Bia > Carla, pela transitividade da relação 'mais alta que'. Carla é a mais baixa.",
+      "rationale": "Inferência transitiva com três termos."
+    },
+    {
+      "id": "log-002", "difficulty": 1, "format": "text", "recommendedSeconds": 45,
+      "prompt": "Quatro amigos — João, Kátia, Leo e Mia — sentam-se lado a lado em uma fila de 4 cadeiras numeradas de 1 a 4. João está na cadeira 1. Mia está na cadeira imediatamente seguinte à de João. Leo não está na cadeira 4. Quem está na cadeira 4?",
+      "options": [{"id":"a","text":"João"},{"id":"b","text":"Kátia"},{"id":"c","text":"Leo"},{"id":"d","text":"Mia"},{"id":"e","text":"Não é possível determinar"}],
+      "answer": "b",
+      "explanation": "João está na cadeira 1 e Mia na 2. Restam as cadeiras 3 e 4 para Leo e Kátia; como Leo não está na 4, ele está na 3 e Kátia na 4.",
+      "rationale": "Problema de alocação com eliminação direta."
+    },
+    {
+      "id": "log-003", "difficulty": 2, "format": "text", "recommendedSeconds": 50,
+      "prompt": "Sempre que chove, o chão do pátio fica molhado. Neste momento, o chão do pátio está seco. O que se pode concluir com certeza?",
+      "options": [{"id":"a","text":"Está chovendo neste momento"},{"id":"b","text":"Neste momento não está chovendo"},{"id":"c","text":"Choveu mais cedo"},{"id":"d","text":"Não choveu hoje"},{"id":"e","text":"Nada pode ser concluído"}],
+      "answer": "b",
+      "explanation": "Pela contrapositiva (modus tollens): se chovesse agora, o chão estaria molhado; como está seco, não está chovendo agora. Não é possível afirmar nada sobre mais cedo, pois o chão pode ter secado.",
+      "rationale": "Modus tollens com distrator que extrapola o intervalo temporal das premissas."
+    },
+    {
+      "id": "log-004", "difficulty": 2, "format": "text", "recommendedSeconds": 60,
+      "prompt": "Cinco corredores terminaram uma prova, sem empates. Tiago chegou antes de Paulo, mas depois de Bruno. Diego chegou depois de Paulo. Ênio chegou em primeiro lugar. Quem chegou em terceiro lugar?",
+      "options": [{"id":"a","text":"Bruno"},{"id":"b","text":"Tiago"},{"id":"c","text":"Paulo"},{"id":"d","text":"Diego"},{"id":"e","text":"Ênio"}],
+      "answer": "b",
+      "explanation": "Ênio é o 1º. Das condições, Bruno < Tiago < Paulo < Diego na ordem de chegada. Os quatro ocupam as posições 2 a 5 nessa ordem: Bruno 2º, Tiago 3º, Paulo 4º, Diego 5º.",
+      "rationale": "Ordenação linear com cadeia de restrições; solução única."
+    },
+    {
+      "id": "log-005", "difficulty": 2, "format": "text", "recommendedSeconds": 55,
+      "prompt": "Considere a afirmação: \"Se um número inteiro é múltiplo de 6, então ele é par.\" Qual das afirmações abaixo é necessariamente verdadeira?",
+      "options": [{"id":"a","text":"Se um número é par, então é múltiplo de 6"},{"id":"b","text":"Se um número não é múltiplo de 6, então é ímpar"},{"id":"c","text":"Se um número é ímpar, então não é múltiplo de 6"},{"id":"d","text":"Todo número par é múltiplo de 3"},{"id":"e","text":"Nenhum múltiplo de 6 é múltiplo de 4"}],
+      "answer": "c",
+      "explanation": "A contrapositiva de 'se P então Q' é 'se não Q então não P', e é logicamente equivalente: se é ímpar, não é múltiplo de 6. As opções a e b são a recíproca e a inversa (inválidas: 4 é par e não é múltiplo de 6). A opção e é falsa: 12 é múltiplo de 6 e de 4.",
+      "rationale": "Distingue contrapositiva de recíproca e inversa; afirmações conferidas com contraexemplos."
+    },
+    {
+      "id": "log-006", "difficulty": 3, "format": "text", "recommendedSeconds": 75,
+      "prompt": "Três caixas fechadas estão rotuladas \"Maçãs\", \"Laranjas\" e \"Mistas\". Uma contém só maçãs, outra só laranjas e outra uma mistura das duas frutas — mas TODOS os rótulos estão errados. Você pode retirar, sem olhar, uma única fruta de uma única caixa. De qual caixa deve retirar a fruta para descobrir o conteúdo de todas as caixas?",
+      "options": [{"id":"a","text":"Da caixa rotulada \"Maçãs\""},{"id":"b","text":"Da caixa rotulada \"Laranjas\""},{"id":"c","text":"Da caixa rotulada \"Mistas\""},{"id":"d","text":"De qualquer uma das três"},{"id":"e","text":"É impossível com uma única fruta"}],
+      "answer": "c",
+      "explanation": "A caixa rotulada \"Mistas\" não é mista, então contém só um tipo de fruta; a fruta retirada revela qual. Suponha que saia maçã: essa é a caixa de maçãs. A caixa rotulada \"Laranjas\" não pode ter laranjas nem maçãs (já identificadas), então é a mista; a rotulada \"Maçãs\" tem laranjas. O caso de sair laranja é simétrico.",
+      "rationale": "Requer usar a restrição 'todos os rótulos errados' para escolher a única fonte de informação conclusiva."
+    },
+    {
+      "id": "log-007", "difficulty": 3, "format": "text", "recommendedSeconds": 75,
+      "prompt": "Em uma ilha, cada habitante sempre diz a verdade ou sempre mente. Rui afirma: \"Eu e Sara somos mentirosos.\" O que se pode concluir?",
+      "options": [{"id":"a","text":"Ambos dizem a verdade"},{"id":"b","text":"Ambos mentem"},{"id":"c","text":"Rui mente e Sara diz a verdade"},{"id":"d","text":"Rui diz a verdade e Sara mente"},{"id":"e","text":"Não é possível determinar"}],
+      "answer": "c",
+      "explanation": "Se Rui dissesse a verdade, ele seria mentiroso — contradição. Logo, Rui mente e a frase é falsa: não é verdade que ambos mentem. Como Rui mente, Sara diz a verdade.",
+      "rationale": "Raciocínio por redução ao absurdo; solução única."
+    },
+    {
+      "id": "log-008", "difficulty": 3, "format": "text", "recommendedSeconds": 80,
+      "prompt": "Exatamente uma entre três pessoas quebrou um vaso. Ana diz: \"Foi o Beto.\" Beto diz: \"Não fui eu.\" Caio diz: \"Não fui eu.\" Sabe-se que exatamente uma das três frases é verdadeira. Quem quebrou o vaso?",
+      "options": [{"id":"a","text":"Ana"},{"id":"b","text":"Beto"},{"id":"c","text":"Caio"},{"id":"d","text":"Ana ou Caio"},{"id":"e","text":"Não é possível determinar"}],
+      "answer": "c",
+      "explanation": "Teste cada hipótese. Se foi Ana: frases de Beto e Caio verdadeiras (2 verdades). Se foi Beto: frases de Ana e Caio verdadeiras (2). Se foi Caio: apenas a frase de Beto é verdadeira (1). Logo, foi Caio.",
+      "rationale": "Teste exaustivo de hipóteses com restrição de contagem."
+    }
+  ]
+}

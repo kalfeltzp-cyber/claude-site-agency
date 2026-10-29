@@ -1,0 +1,149 @@
+{
+  "category": "abstrato",
+  "defaults": {
+    "status": "reviewed",
+    "quality": { "reviewStatus": "author_reviewed", "reviewedAt": "2026-10-29", "notes": "Regras verificadas por linha e por coluna; cada distrator viola ao menos uma regra. Itens originais construídos com regras do tipo descrito por Carpenter, Just e Shell (1990). Sem calibração empírica.", "empiricallyCalibrated": false }
+  },
+  "questions": [
+    {
+      "id": "abs-001", "difficulty": 1, "format": "matrix", "recommendedSeconds": 40,
+      "prompt": "Observe a matriz e escolha a figura que completa a célula vazia.",
+      "figure": {"matrix": [
+        {"shape":"circle","count":1},{"shape":"circle","count":2},{"shape":"circle","count":3},
+        {"shape":"square","count":1},{"shape":"square","count":2},{"shape":"square","count":3},
+        {"shape":"triangle","count":1},{"shape":"triangle","count":2},null
+      ]},
+      "options": [
+        {"id":"a","figure":{"shape":"triangle","count":3}},
+        {"id":"b","figure":{"shape":"triangle","count":2}},
+        {"id":"c","figure":{"shape":"square","count":3}},
+        {"id":"d","figure":{"shape":"triangle","count":4}},
+        {"id":"e","figure":{"shape":"circle","count":3}},
+        {"id":"f","figure":{"shape":"triangle","count":1}}
+      ],
+      "answer": "a",
+      "explanation": "Cada linha mantém a mesma forma e a quantidade aumenta de 1 a 3 da esquerda para a direita. Na terceira linha (triângulos), falta a figura com 3 triângulos.",
+      "rationale": "Regra de progressão quantitativa com forma constante por linha."
+    },
+    {
+      "id": "abs-002", "difficulty": 1, "format": "matrix", "recommendedSeconds": 40,
+      "prompt": "Observe a matriz e escolha a figura que completa a célula vazia.",
+      "figure": {"matrix": [
+        {"shape":"square","fill":"outline"},{"shape":"square","fill":"striped"},{"shape":"square","fill":"solid"},
+        {"shape":"circle","fill":"outline"},{"shape":"circle","fill":"striped"},{"shape":"circle","fill":"solid"},
+        {"shape":"diamond","fill":"outline"},{"shape":"diamond","fill":"striped"},null
+      ]},
+      "options": [
+        {"id":"a","figure":{"shape":"diamond","fill":"outline"}},
+        {"id":"b","figure":{"shape":"diamond","fill":"striped"}},
+        {"id":"c","figure":{"shape":"diamond","fill":"solid"}},
+        {"id":"d","figure":{"shape":"square","fill":"solid"}},
+        {"id":"e","figure":{"shape":"circle","fill":"solid"}},
+        {"id":"f","figure":{"shape":"hexagon","fill":"solid"}}
+      ],
+      "answer": "c",
+      "explanation": "A forma é constante em cada linha; o preenchimento segue a ordem vazado → listrado → sólido em cada linha. Falta o losango sólido.",
+      "rationale": "Duas regras independentes e simples (forma por linha, preenchimento por coluna)."
+    },
+    {
+      "id": "abs-003", "difficulty": 2, "format": "matrix", "recommendedSeconds": 60,
+      "prompt": "Observe a matriz e escolha a figura que completa a célula vazia.",
+      "figure": {"matrix": [
+        {"shape":"circle","fill":"solid"},{"shape":"square","fill":"outline"},{"shape":"triangle","fill":"striped"},
+        {"shape":"square","fill":"striped"},{"shape":"triangle","fill":"solid"},{"shape":"circle","fill":"outline"},
+        {"shape":"triangle","fill":"outline"},{"shape":"circle","fill":"striped"},null
+      ]},
+      "options": [
+        {"id":"a","figure":{"shape":"square","fill":"outline"}},
+        {"id":"b","figure":{"shape":"square","fill":"solid"}},
+        {"id":"c","figure":{"shape":"square","fill":"striped"}},
+        {"id":"d","figure":{"shape":"circle","fill":"solid"}},
+        {"id":"e","figure":{"shape":"triangle","fill":"solid"}},
+        {"id":"f","figure":{"shape":"triangle","fill":"striped"}}
+      ],
+      "answer": "b",
+      "explanation": "Cada linha e cada coluna contém exatamente uma vez cada forma (círculo, quadrado, triângulo) e cada preenchimento (sólido, vazado, listrado). Na última linha faltam o quadrado e o preenchimento sólido; a terceira coluna confirma: já tem listrado e vazado.",
+      "rationale": "Regra de distribuição de três valores (quadrado latino) em dois atributos."
+    },
+    {
+      "id": "abs-004", "difficulty": 2, "format": "matrix", "recommendedSeconds": 60,
+      "prompt": "Observe a matriz e escolha a figura que completa a célula vazia.",
+      "figure": {"matrix": [
+        {"shape":"arrow","fill":"solid","rotation":0},{"shape":"arrow","fill":"solid","rotation":45},{"shape":"arrow","fill":"solid","rotation":90},
+        {"shape":"arrow","fill":"solid","rotation":90},{"shape":"arrow","fill":"solid","rotation":135},{"shape":"arrow","fill":"solid","rotation":180},
+        {"shape":"arrow","fill":"solid","rotation":180},{"shape":"arrow","fill":"solid","rotation":225},null
+      ]},
+      "options": [
+        {"id":"a","figure":{"shape":"arrow","fill":"solid","rotation":90}},
+        {"id":"b","figure":{"shape":"arrow","fill":"solid","rotation":225}},
+        {"id":"c","figure":{"shape":"arrow","fill":"solid","rotation":270}},
+        {"id":"d","figure":{"shape":"arrow","fill":"solid","rotation":315}},
+        {"id":"e","figure":{"shape":"arrow","fill":"solid","rotation":0}},
+        {"id":"f","figure":{"shape":"arrow","fill":"solid","rotation":180}}
+      ],
+      "answer": "c",
+      "explanation": "Da esquerda para a direita, a seta gira 45° no sentido horário. Cada linha começa onde a linha anterior terminou. A terceira linha vai de 180° (para baixo) a 225°; a próxima posição é 270° (seta para a esquerda).",
+      "rationale": "Regra de rotação constante com encadeamento entre linhas."
+    },
+    {
+      "id": "abs-005", "difficulty": 2, "format": "matrix", "recommendedSeconds": 60,
+      "prompt": "Observe a matriz e escolha a figura que completa a célula vazia.",
+      "figure": {"matrix": [
+        {"shape":"star","fill":"solid","count":1},{"shape":"star","fill":"solid","count":2},{"shape":"star","fill":"solid","count":3},
+        {"shape":"hexagon","fill":"solid","count":2},{"shape":"hexagon","fill":"solid","count":1},{"shape":"hexagon","fill":"solid","count":3},
+        {"shape":"pentagon","fill":"solid","count":2},{"shape":"pentagon","fill":"solid","count":2},null
+      ]},
+      "options": [
+        {"id":"a","figure":{"shape":"pentagon","fill":"solid","count":3}},
+        {"id":"b","figure":{"shape":"pentagon","fill":"solid","count":2}},
+        {"id":"c","figure":{"shape":"pentagon","fill":"solid","count":5}},
+        {"id":"d","figure":{"shape":"pentagon","fill":"solid","count":4}},
+        {"id":"e","figure":{"shape":"hexagon","fill":"solid","count":4}},
+        {"id":"f","figure":{"shape":"star","fill":"solid","count":4}}
+      ],
+      "answer": "d",
+      "explanation": "Em cada linha, a quantidade da terceira coluna é a soma das duas primeiras (1 + 2 = 3; 2 + 1 = 3). Na última linha: 2 + 2 = 4 pentágonos.",
+      "rationale": "Regra aditiva; a segunda linha (2, 1, 3) descarta a hipótese de simples progressão 1, 2, 3."
+    },
+    {
+      "id": "abs-006", "difficulty": 3, "format": "matrix", "recommendedSeconds": 90,
+      "prompt": "Observe a matriz e escolha a figura que completa a célula vazia.",
+      "figure": {"matrix": [
+        {"shape":"circle","fill":"outline","count":1},{"shape":"circle","fill":"solid","count":2},{"shape":"circle","fill":"striped","count":3},
+        {"shape":"square","fill":"striped","count":2},{"shape":"square","fill":"outline","count":3},{"shape":"square","fill":"solid","count":1},
+        {"shape":"triangle","fill":"solid","count":3},{"shape":"triangle","fill":"striped","count":1},null
+      ]},
+      "options": [
+        {"id":"a","figure":{"shape":"triangle","fill":"solid","count":2}},
+        {"id":"b","figure":{"shape":"triangle","fill":"outline","count":3}},
+        {"id":"c","figure":{"shape":"triangle","fill":"outline","count":2}},
+        {"id":"d","figure":{"shape":"triangle","fill":"outline","count":1}},
+        {"id":"e","figure":{"shape":"square","fill":"outline","count":2}},
+        {"id":"f","figure":{"shape":"triangle","fill":"striped","count":2}}
+      ],
+      "answer": "c",
+      "explanation": "Três regras simultâneas: a forma é constante em cada linha; as quantidades 1, 2 e 3 aparecem uma vez em cada linha e coluna; os preenchimentos vazado, sólido e listrado também aparecem uma vez em cada linha e coluna. Na última célula: triângulo, quantidade 2 (falta na linha e na coluna) e preenchimento vazado (falta na linha e na coluna).",
+      "rationale": "Três atributos combinados; cada distrator viola exatamente um atributo."
+    },
+    {
+      "id": "abs-007", "difficulty": 3, "format": "matrix", "recommendedSeconds": 90,
+      "prompt": "Observe a matriz e escolha a figura que completa a célula vazia.",
+      "figure": {"matrix": [
+        {"shape":"arrow","fill":"solid","rotation":0,"count":1},{"shape":"arrow","fill":"solid","rotation":90,"count":1},{"shape":"arrow","fill":"solid","rotation":180,"count":1},
+        {"shape":"arrow","fill":"solid","rotation":90,"count":2},{"shape":"arrow","fill":"solid","rotation":180,"count":2},{"shape":"arrow","fill":"solid","rotation":270,"count":2},
+        {"shape":"arrow","fill":"solid","rotation":180,"count":3},{"shape":"arrow","fill":"solid","rotation":270,"count":3},null
+      ]},
+      "options": [
+        {"id":"a","figure":{"shape":"arrow","fill":"solid","rotation":0,"count":3}},
+        {"id":"b","figure":{"shape":"arrow","fill":"solid","rotation":90,"count":3}},
+        {"id":"c","figure":{"shape":"arrow","fill":"solid","rotation":180,"count":3}},
+        {"id":"d","figure":{"shape":"arrow","fill":"solid","rotation":0,"count":2}},
+        {"id":"e","figure":{"shape":"arrow","fill":"solid","rotation":0,"count":4}},
+        {"id":"f","figure":{"shape":"arrow","fill":"solid","rotation":270,"count":3}}
+      ],
+      "answer": "a",
+      "explanation": "A quantidade de setas é constante em cada linha e aumenta de linha para linha (1, 2, 3). A direção gira 90° no sentido horário a cada coluna, e cada linha começa 90° adiante da anterior. Na última linha: 180° → 270° → 360° = 0° (seta para cima), com 3 setas.",
+      "rationale": "Dois atributos (quantidade por linha, rotação por coluna com deslocamento) e retorno cíclico a 0°."
+    }
+  ]
+}

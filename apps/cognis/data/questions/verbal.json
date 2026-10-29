@@ -1,0 +1,73 @@
+{
+  "category": "verbal",
+  "defaults": {
+    "status": "reviewed",
+    "quality": { "reviewStatus": "author_reviewed", "reviewedAt": "2026-10-29", "notes": "Relação do par-base nomeada explicitamente; distratores verificados para não satisfazerem a mesma relação. Depende de vocabulário do português brasileiro. Sem calibração empírica.", "empiricallyCalibrated": false }
+  },
+  "questions": [
+    {
+      "id": "ver-001", "difficulty": 1, "format": "text", "recommendedSeconds": 25,
+      "prompt": "PÁSSARO está para NINHO assim como ABELHA está para:",
+      "options": [{"id":"a","text":"Mel"},{"id":"b","text":"Flor"},{"id":"c","text":"Colmeia"},{"id":"d","text":"Ferrão"},{"id":"e","text":"Enxame"}],
+      "answer": "c",
+      "explanation": "Relação: animal → abrigo que constrói/habita. A abelha habita a colmeia.",
+      "rationale": "Analogia de habitação; distratores são associações temáticas da abelha."
+    },
+    {
+      "id": "ver-002", "difficulty": 1, "format": "text", "recommendedSeconds": 25,
+      "prompt": "QUENTE está para FRIO assim como ALTO está para:",
+      "options": [{"id":"a","text":"Grande"},{"id":"b","text":"Baixo"},{"id":"c","text":"Largo"},{"id":"d","text":"Comprido"},{"id":"e","text":"Elevado"}],
+      "answer": "b",
+      "explanation": "Relação: antônimos. O oposto de alto é baixo.",
+      "rationale": "Analogia de oposição; 'elevado' é sinônimo, não antônimo."
+    },
+    {
+      "id": "ver-003", "difficulty": 2, "format": "text", "recommendedSeconds": 35,
+      "prompt": "PINTOR está para PINCEL assim como ESCULTOR está para:",
+      "options": [{"id":"a","text":"Estátua"},{"id":"b","text":"Museu"},{"id":"c","text":"Cinzel"},{"id":"d","text":"Mármore"},{"id":"e","text":"Galeria"}],
+      "answer": "c",
+      "explanation": "Relação: profissional → instrumento de trabalho. O escultor usa o cinzel. Mármore é material (equivaleria à tinta) e estátua é produto (equivaleria ao quadro).",
+      "rationale": "Analogia ferramenta–agente com distratores de material e produto."
+    },
+    {
+      "id": "ver-004", "difficulty": 2, "format": "text", "recommendedSeconds": 35,
+      "prompt": "SEMENTE está para ÁRVORE assim como OVO está para:",
+      "options": [{"id":"a","text":"Ninho"},{"id":"b","text":"Gema"},{"id":"c","text":"Ave"},{"id":"d","text":"Casca"},{"id":"e","text":"Galinheiro"}],
+      "answer": "c",
+      "explanation": "Relação: estágio inicial → organismo desenvolvido. Do ovo desenvolve-se a ave.",
+      "rationale": "Analogia de desenvolvimento; gema e casca são partes do ovo."
+    },
+    {
+      "id": "ver-005", "difficulty": 2, "format": "text", "recommendedSeconds": 35,
+      "prompt": "TERMÔMETRO está para TEMPERATURA assim como BALANÇA está para:",
+      "options": [{"id":"a","text":"Massa"},{"id":"b","text":"Volume"},{"id":"c","text":"Altura"},{"id":"d","text":"Densidade"},{"id":"e","text":"Equilíbrio"}],
+      "answer": "a",
+      "explanation": "Relação: instrumento → grandeza que mede. A balança mede massa (no uso cotidiano, chamada de 'peso').",
+      "rationale": "Analogia instrumento–grandeza; 'equilíbrio' é associação de forma, não grandeza medida."
+    },
+    {
+      "id": "ver-006", "difficulty": 2, "format": "text", "recommendedSeconds": 40,
+      "prompt": "ARQUIPÉLAGO está para ILHA assim como CONSTELAÇÃO está para:",
+      "options": [{"id":"a","text":"Galáxia"},{"id":"b","text":"Planeta"},{"id":"c","text":"Estrela"},{"id":"d","text":"Céu"},{"id":"e","text":"Órbita"}],
+      "answer": "c",
+      "explanation": "Relação: conjunto → elemento que o compõe. Um arquipélago é um conjunto de ilhas; uma constelação é um agrupamento de estrelas.",
+      "rationale": "Analogia todo–parte (coletivo)."
+    },
+    {
+      "id": "ver-007", "difficulty": 3, "format": "text", "recommendedSeconds": 45,
+      "prompt": "PROLIXO está para CONCISO assim como OSTENTOSO está para:",
+      "options": [{"id":"a","text":"Luxuoso"},{"id":"b","text":"Discreto"},{"id":"c","text":"Vaidoso"},{"id":"d","text":"Exagerado"},{"id":"e","text":"Brilhante"}],
+      "answer": "b",
+      "explanation": "Relação: antônimos. Prolixo (que usa palavras demais) opõe-se a conciso; ostentoso (que exibe em excesso) opõe-se a discreto.",
+      "rationale": "Antonímia com vocabulário menos frequente; distratores são sinônimos ou próximos de 'ostentoso'."
+    },
+    {
+      "id": "ver-008", "difficulty": 3, "format": "text", "recommendedSeconds": 45,
+      "prompt": "CRONÔMETRO está para TEMPO assim como ODÔMETRO está para:",
+      "options": [{"id":"a","text":"Velocidade"},{"id":"b","text":"Distância"},{"id":"c","text":"Combustível"},{"id":"d","text":"Pressão"},{"id":"e","text":"Aceleração"}],
+      "answer": "b",
+      "explanation": "Relação: instrumento → grandeza que mede. O odômetro mede a distância percorrida (o velocímetro mede a velocidade).",
+      "rationale": "Analogia instrumento–grandeza com vocabulário técnico; distrator principal é 'velocidade'."
+    }
+  ]
+}

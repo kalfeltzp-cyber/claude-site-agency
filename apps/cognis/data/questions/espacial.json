@@ -1,0 +1,359 @@
+{
+  "category": "espacial",
+  "defaults": {
+    "status": "reviewed",
+    "quality": {
+      "reviewStatus": "author_reviewed",
+      "reviewedAt": "2026-10-29",
+      "notes": "Transformações geométricas conferidas; a figura F não possui simetria, então as 8 orientações (4 rotações × espelhamento) são distintas. Sem calibração empírica.",
+      "empiricallyCalibrated": false
+    }
+  },
+  "questions": [
+    {
+      "id": "esp-001",
+      "difficulty": 1,
+      "format": "text",
+      "recommendedSeconds": 30,
+      "prompt": "Você está de frente para o norte. Gira 90° para a sua direita e, em seguida, gira 180°. Para que direção está voltado agora?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Norte"
+        },
+        {
+          "id": "b",
+          "text": "Sul"
+        },
+        {
+          "id": "c",
+          "text": "Leste"
+        },
+        {
+          "id": "d",
+          "text": "Oeste"
+        },
+        {
+          "id": "e",
+          "text": "Nordeste"
+        }
+      ],
+      "answer": "d",
+      "explanation": "Girando 90° à direita a partir do norte, você fica voltado para o leste. Girando 180°, passa a olhar para o oeste.",
+      "rationale": "Orientação espacial com composição de rotações."
+    },
+    {
+      "id": "esp-002",
+      "difficulty": 1,
+      "format": "text",
+      "recommendedSeconds": 30,
+      "prompt": "Imagine a letra minúscula \"b\" refletida em um espelho colocado ao lado dela (a imagem fica invertida da esquerda para a direita). Com qual letra a imagem refletida se parece?",
+      "options": [
+        {
+          "id": "a",
+          "text": "b"
+        },
+        {
+          "id": "b",
+          "text": "d"
+        },
+        {
+          "id": "c",
+          "text": "p"
+        },
+        {
+          "id": "d",
+          "text": "q"
+        },
+        {
+          "id": "e",
+          "text": "h"
+        }
+      ],
+      "answer": "b",
+      "explanation": "A reflexão esquerda–direita leva a haste do lado esquerdo para o direito, mantendo-a para cima: \"b\" vira \"d\". (A reflexão de cima para baixo levaria a \"p\".)",
+      "rationale": "Reflexão em eixo vertical; distratores correspondem a outras transformações."
+    },
+    {
+      "id": "esp-003",
+      "difficulty": 2,
+      "format": "figure_choice",
+      "recommendedSeconds": 45,
+      "prompt": "Qual alternativa mostra a figura-modelo girada 90° no sentido horário?",
+      "figure": {
+        "model": {
+          "shape": "fshape",
+          "fill": "solid",
+          "rotation": 0
+        }
+      },
+      "options": [
+        {
+          "id": "a",
+          "figure": {
+            "shape": "fshape",
+            "fill": "solid",
+            "rotation": 0
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shape": "fshape",
+            "fill": "solid",
+            "rotation": 90
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shape": "fshape",
+            "fill": "solid",
+            "rotation": 180
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shape": "fshape",
+            "fill": "solid",
+            "rotation": 270
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shape": "fshape",
+            "fill": "solid",
+            "rotation": 90,
+            "mirror": true
+          }
+        }
+      ],
+      "answer": "b",
+      "explanation": "Girar 90° no sentido horário leva a haste vertical do F para a posição horizontal, com os braços voltados para baixo. A alternativa espelhada tem a mesma inclinação, mas os braços estão do lado oposto.",
+      "rationale": "Rotação mental 2D com distrator espelhado (paradigma de Shepard e Metzler adaptado ao plano)."
+    },
+    {
+      "id": "esp-004",
+      "difficulty": 2,
+      "format": "figure_choice",
+      "recommendedSeconds": 50,
+      "prompt": "Apenas uma alternativa mostra a figura-modelo somente GIRADA (sem espelhamento). As demais são versões espelhadas. Qual é ela?",
+      "figure": {
+        "model": {
+          "shape": "fshape",
+          "fill": "solid",
+          "rotation": 0
+        }
+      },
+      "options": [
+        {
+          "id": "a",
+          "figure": {
+            "shape": "fshape",
+            "fill": "solid",
+            "rotation": 0,
+            "mirror": true
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shape": "fshape",
+            "fill": "solid",
+            "rotation": 90,
+            "mirror": true
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shape": "fshape",
+            "fill": "solid",
+            "rotation": 180
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shape": "fshape",
+            "fill": "solid",
+            "rotation": 180,
+            "mirror": true
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shape": "fshape",
+            "fill": "solid",
+            "rotation": 270,
+            "mirror": true
+          }
+        }
+      ],
+      "answer": "c",
+      "explanation": "A alternativa correta é o F girado 180° (de cabeça para baixo). As outras quatro não podem ser obtidas apenas por rotação: todas exigem uma reflexão.",
+      "rationale": "Discriminação entre rotação e reflexão (quiralidade)."
+    },
+    {
+      "id": "esp-005",
+      "difficulty": 2,
+      "format": "text",
+      "recommendedSeconds": 55,
+      "prompt": "Um cubo grande de 3 × 3 × 3 é formado por 27 cubinhos iguais. A superfície externa do cubo grande é toda pintada. Quantos cubinhos têm EXATAMENTE duas faces pintadas?",
+      "options": [
+        {
+          "id": "a",
+          "text": "6"
+        },
+        {
+          "id": "b",
+          "text": "8"
+        },
+        {
+          "id": "c",
+          "text": "12"
+        },
+        {
+          "id": "d",
+          "text": "18"
+        },
+        {
+          "id": "e",
+          "text": "24"
+        }
+      ],
+      "answer": "c",
+      "explanation": "Cubinhos com duas faces pintadas ficam no meio das arestas. Um cubo tem 12 arestas e cada uma tem 3 − 2 = 1 cubinho central: 12 × 1 = 12. (Os 8 dos vértices têm três faces pintadas; os 6 centros de face, uma.)",
+      "rationale": "Visualização 3D com decomposição em vértices, arestas e faces."
+    },
+    {
+      "id": "esp-006",
+      "difficulty": 2,
+      "format": "text",
+      "recommendedSeconds": 55,
+      "prompt": "Em um dado comum de seis faces, as faces opostas sempre somam 7. O dado está sobre a mesa com a face 2 para cima e a face 3 voltada para você. Qual é a soma da face de baixo com a face de trás?",
+      "options": [
+        {
+          "id": "a",
+          "text": "7"
+        },
+        {
+          "id": "b",
+          "text": "8"
+        },
+        {
+          "id": "c",
+          "text": "9"
+        },
+        {
+          "id": "d",
+          "text": "10"
+        },
+        {
+          "id": "e",
+          "text": "11"
+        }
+      ],
+      "answer": "c",
+      "explanation": "A face de baixo é oposta à de cima: 7 − 2 = 5. A de trás é oposta à da frente: 7 − 3 = 4. Soma: 5 + 4 = 9.",
+      "rationale": "Relações de oposição em um objeto tridimensional."
+    },
+    {
+      "id": "esp-007",
+      "difficulty": 3,
+      "format": "text",
+      "recommendedSeconds": 70,
+      "prompt": "Um cubo grande de 4 × 4 × 4 é formado por 64 cubinhos iguais. A superfície externa do cubo grande é toda pintada. Quantos cubinhos NÃO têm nenhuma face pintada?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1"
+        },
+        {
+          "id": "b",
+          "text": "4"
+        },
+        {
+          "id": "c",
+          "text": "8"
+        },
+        {
+          "id": "d",
+          "text": "16"
+        },
+        {
+          "id": "e",
+          "text": "27"
+        }
+      ],
+      "answer": "c",
+      "explanation": "Os cubinhos sem tinta formam o núcleo interno, que tem (4 − 2) cubinhos em cada dimensão: 2 × 2 × 2 = 8.",
+      "rationale": "Visualização do núcleo interno; distrator 27 corresponde a 3³."
+    },
+    {
+      "id": "esp-008",
+      "difficulty": 3,
+      "format": "figure_choice",
+      "recommendedSeconds": 80,
+      "prompt": "A figura-modelo é primeiro ESPELHADA da esquerda para a direita (como em um espelho colocado ao lado dela) e, em seguida, GIRADA 90° no sentido horário. Qual é o resultado?",
+      "figure": {
+        "model": {
+          "shape": "fshape",
+          "fill": "solid",
+          "rotation": 0
+        }
+      },
+      "options": [
+        {
+          "id": "a",
+          "figure": {
+            "shape": "fshape",
+            "fill": "solid",
+            "rotation": 90
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shape": "fshape",
+            "fill": "solid",
+            "rotation": 90,
+            "mirror": true
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shape": "fshape",
+            "fill": "solid",
+            "rotation": 270,
+            "mirror": true
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shape": "fshape",
+            "fill": "solid",
+            "rotation": 0,
+            "mirror": true
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shape": "fshape",
+            "fill": "solid",
+            "rotation": 270
+          }
+        }
+      ],
+      "answer": "b",
+      "explanation": "Após o espelhamento, os braços do F passam a apontar para a esquerda. Girando 90° no sentido horário, a haste fica horizontal e os braços passam a apontar para cima. As alternativas com a haste horizontal e os braços para baixo correspondem a girar sem espelhar ou a girar no sentido anti-horário.",
+      "rationale": "Composição de duas transformações (reflexão seguida de rotação)."
+    }
+  ]
+}
