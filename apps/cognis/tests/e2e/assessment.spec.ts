@@ -91,8 +91,8 @@ test.describe.serial("avaliação de ponta a ponta (sem conta)", () => {
     expect(page.url()).toContain(attemptId);
 
     await expect(page.getByRole("heading", { name: "Análise do seu desempenho" })).toBeVisible();
-    const heroText = await page.getByText(/acertos em 36 questões/).textContent();
-    const correct = Number(heroText!.match(/(\d+) acertos/)![1]);
+    const heroText = await page.getByText(/acertos? em 36 questões/).textContent();
+    const correct = Number(heroText!.match(/(\d+) acertos?/)![1]);
     const index = await page.locator("text=Índice de Desempenho Cognitivo").first().locator("xpath=..").locator(".font-display").first().textContent();
     expect(Number(index!.replace(",", "."))).toBeCloseTo(Math.round((1000 * correct) / 36) / 10, 1);
     await expect(page.getByRole("heading", { name: "Desempenho por categoria" })).toBeVisible();

@@ -63,7 +63,7 @@ test.describe("páginas públicas", () => {
   });
 
   test("layout móvel sem rolagem horizontal", async ({ browser }) => {
-    const ctx = await browser.newContext({ viewport: { width: 360, height: 740 }, isMobile: true, hasTouch: true });
+    const ctx = await browser.newContext({ viewport: { width: 360, height: 740 }, hasTouch: true });
     const page = await ctx.newPage();
     for (const path of ["/", "/como-funciona", "/metodologia", "/avaliacao", "/faq"]) {
       await page.goto(path);

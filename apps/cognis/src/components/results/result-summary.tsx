@@ -23,7 +23,7 @@ export function ScoreHero({ result, shared = false }: { result: ResultView; shar
             <span className="font-mono text-lg text-faint">/ 100</span>
           </p>
           <p className="mt-3 text-muted">
-            {s.correct} acertos em {s.totalItems} questões
+            {s.correct} {s.correct === 1 ? "acerto" : "acertos"} em {s.totalItems} questões
           </p>
         </div>
         <div className="space-y-4">

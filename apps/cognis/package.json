@@ -18,7 +18,8 @@
     "db:migrate": "tsx scripts/migrate.ts",
     "db:seed": "tsx scripts/seed.ts",
     "db:setup-local": "tsx scripts/setup-local.ts",
-    "db:sql": "tsx scripts/generate-sql.ts"
+    "db:sql": "tsx scripts/generate-sql.ts",
+    "build:standalone": "tsx scripts/build-standalone.ts"
   },
   "dependencies": {
     "@supabase/ssr": "0.12.7",

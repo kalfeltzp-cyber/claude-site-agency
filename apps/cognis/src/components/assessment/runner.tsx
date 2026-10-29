@@ -439,7 +439,7 @@ export function AssessmentRunner({ attemptId }: { attemptId: string }) {
                 </div>
               )}
 
-              <fieldset className="mt-8">
+              <fieldset className="mt-8 min-w-0">
                 <legend className="sr-only">Alternativas da questão {current + 1}</legend>
                 <div className={cn("grid gap-3", figureOptions ? "grid-cols-2 sm:grid-cols-3" : "grid-cols-1")}>
                   {question.options.map((o) => {
