@@ -156,6 +156,8 @@ npm run build && npm run test:e2e   # Playwright contra `next start` (inclui axe
 
 ## Deploy na Vercel
 
+Guia passo a passo, sem terminal: [`DEPLOY-VERCEL.md`](DEPLOY-VERCEL.md). Para configurar o banco pelo editor SQL do Supabase, cole `supabase/setup-completo.sql` (migração + conteúdo, gerado por `npm run db:sql`); use esse arquivo **ou** `db:migrate` + `db:seed`, não os dois.
+
 1. Importe o repositório e defina **Root Directory** = `apps/cognis`.
 2. Configure as variáveis de ambiente (Production e Preview): `NEXT_PUBLIC_SITE_URL`, `DATABASE_URL` (pooler, porta 6543),
    `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`, `ADMIN_EMAILS`.

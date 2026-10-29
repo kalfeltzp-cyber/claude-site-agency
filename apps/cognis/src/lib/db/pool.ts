@@ -10,6 +10,21 @@ export interface Queryable {
   query<T extends QueryResultRow = QueryResultRow>(text: string, params?: unknown[]): Promise<T[]>;
 }
 
+/**
+ * Remove parâmetros ssl* da URL (ex.: ?sslmode=require copiado do painel do
+ * Supabase). No driver pg eles sobrescrevem a opção `ssl` abaixo e ativam a
+ * verificação estrita do certificado, o que derruba a conexão sem uma CA.
+ */
+export function stripSslParams(url: string): string {
+  const q = url.indexOf("?");
+  if (q === -1) return url;
+  const kept = url
+    .slice(q + 1)
+    .split("&")
+    .filter((kv) => kv && !/^ssl/i.test(kv));
+  return url.slice(0, q) + (kept.length ? `?${kept.join("&")}` : "");
+}
+
 function sslOption(url: string) {
   const mode = process.env.DATABASE_SSL;
   if (mode === "disable") return false;
@@ -26,7 +41,7 @@ export function getPool(url = process.env.DATABASE_URL): Pool {
   if (!url) throw new Error("DATABASE_URL não configurada.");
   if (globalForPool.__cognisPool && globalForPool.__cognisPoolUrl === url) return globalForPool.__cognisPool;
   const pool = new Pool({
-    connectionString: url,
+    connectionString: stripSslParams(url),
     ssl: sslOption(url),
     max: Number(process.env.DATABASE_POOL_MAX || 5),
     idleTimeoutMillis: 10_000,

@@ -153,3 +153,17 @@ describe("scoreAttempt", () => {
     expect(obs.lowerPerformance.map((c) => c.category)).toEqual(["d", "b"]);
   });
 });
+
+import { stripSslParams } from "@/lib/db/pool";
+
+describe("stripSslParams", () => {
+  it("remove sslmode e preserva os demais parâmetros e a senha", () => {
+    expect(stripSslParams("postgresql://u:p%40ss@h.pooler.supabase.com:6543/postgres?sslmode=require")).toBe(
+      "postgresql://u:p%40ss@h.pooler.supabase.com:6543/postgres",
+    );
+    expect(stripSslParams("postgres://u:p@h:5432/db?application_name=x&sslmode=verify-full&sslrootcert=a")).toBe(
+      "postgres://u:p@h:5432/db?application_name=x",
+    );
+    expect(stripSslParams("postgres://u:p@h:5432/db")).toBe("postgres://u:p@h:5432/db");
+  });
+});
