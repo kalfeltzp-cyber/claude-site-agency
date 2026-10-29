@@ -1,0 +1,23 @@
+[
+  {
+    "id": "v1",
+    "name": "Avaliação padrão v1 (experimental)",
+    "status": "active",
+    "timeLimitSeconds": 2400,
+    "notes": "Matriz inicial de produto: 36 itens, 10 categorias, 3 níveis de dificuldade atribuídos pelos autores (não calibrados). Números são parâmetros de produto, não padrões científicos.",
+    "blueprint": {
+      "cells": [
+        {"category": "logico", "counts": {"1": 1, "2": 2, "3": 1}},
+        {"category": "abstrato", "counts": {"1": 1, "2": 1, "3": 1}},
+        {"category": "padroes", "counts": {"1": 1, "2": 1, "3": 1}},
+        {"category": "numerico", "counts": {"1": 1, "2": 2, "3": 1}},
+        {"category": "espacial", "counts": {"1": 1, "2": 1, "3": 1}},
+        {"category": "verbal", "counts": {"1": 1, "2": 2, "3": 1}},
+        {"category": "deducao", "counts": {"1": 1, "2": 2, "3": 1}},
+        {"category": "problemas", "counts": {"1": 1, "2": 2, "3": 1}},
+        {"category": "memoria", "counts": {"1": 1, "2": 1, "3": 1}},
+        {"category": "quantitativo", "counts": {"1": 1, "2": 2, "3": 1}}
+      ]
+    }
+  }
+]

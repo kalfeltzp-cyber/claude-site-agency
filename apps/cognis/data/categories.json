@@ -1,0 +1,82 @@
+[
+  {
+    "id": "logico",
+    "name": "Raciocínio lógico",
+    "description": "Organizar informações, comparar relações e identificar a única configuração compatível com todas as condições.",
+    "construct": "Raciocínio sequencial e relacional (componente de raciocínio fluido)",
+    "practice": ["Resolver problemas de ordenação com tabelas de possibilidades", "Puzzles de verdade/mentira anotando cada hipótese", "Jogos de lógica como Sudoku e nonogramas"],
+    "sortOrder": 1
+  },
+  {
+    "id": "abstrato",
+    "name": "Raciocínio abstrato",
+    "description": "Inferir regras não verbais em matrizes de figuras e aplicá-las para completar o padrão.",
+    "construct": "Indução de regras em material figural (raciocínio fluido, Gf)",
+    "practice": ["Descrever em palavras cada regra que muda em linhas e colunas", "Separar atributos: forma, quantidade, preenchimento e rotação", "Praticar matrizes de figuras de domínio público"],
+    "sortOrder": 2
+  },
+  {
+    "id": "padroes",
+    "name": "Reconhecimento de padrões",
+    "description": "Identificar regularidades em sequências de letras, símbolos e figuras.",
+    "construct": "Indução de regularidades seriais",
+    "practice": ["Converter letras em posições numéricas (A = 1, B = 2…)", "Procurar duas regras alternadas na mesma sequência", "Criar suas próprias sequências e testá-las com outras pessoas"],
+    "sortOrder": 3
+  },
+  {
+    "id": "numerico",
+    "name": "Sequências numéricas",
+    "description": "Descobrir a regra que gera uma série numérica e prever o próximo termo.",
+    "construct": "Indução quantitativa (raciocínio fluido quantitativo)",
+    "practice": ["Calcular as diferenças entre termos e as diferenças das diferenças", "Testar razões (multiplicação/divisão) quando as diferenças crescem rápido", "Verificar se há duas séries intercaladas"],
+    "sortOrder": 4
+  },
+  {
+    "id": "espacial",
+    "name": "Relações espaciais",
+    "description": "Manipular mentalmente orientação, rotação, reflexão e estrutura tridimensional.",
+    "construct": "Visualização e rotação mental (habilidade visuoespacial, Gv)",
+    "practice": ["Montar e desmontar planificações de cubos em papel", "Jogos de encaixe e rotação de peças", "Desenhar uma figura e prever como fica após girar ou espelhar"],
+    "sortOrder": 5
+  },
+  {
+    "id": "verbal",
+    "name": "Analogias verbais",
+    "description": "Reconhecer a relação entre dois conceitos e encontrar um par com a mesma relação.",
+    "construct": "Raciocínio analógico com conhecimento verbal (envolve conhecimento cristalizado, Gc)",
+    "practice": ["Nomear explicitamente a relação do primeiro par antes de olhar as opções", "Leitura variada para ampliar vocabulário", "Classificar relações: parte–todo, ferramenta–função, oposição, causa–efeito"],
+    "sortOrder": 6
+  },
+  {
+    "id": "deducao",
+    "name": "Dedução lógica",
+    "description": "Avaliar o que se segue necessariamente de premissas, distinguindo conclusões válidas de plausíveis.",
+    "construct": "Raciocínio dedutivo (silogismos e condicionais)",
+    "practice": ["Representar premissas com diagramas de Venn", "Estudar falácias formais: afirmar o consequente e negar o antecedente", "Reescrever condicionais na forma contrapositiva"],
+    "sortOrder": 7
+  },
+  {
+    "id": "problemas",
+    "name": "Resolução de problemas",
+    "description": "Modelar situações cotidianas e encontrar estratégias eficientes de solução.",
+    "construct": "Resolução de problemas e planejamento",
+    "practice": ["Simular casos pequenos antes de generalizar", "Desenhar o problema em um esquema", "Conferir a resposta voltando ao enunciado"],
+    "sortOrder": 8
+  },
+  {
+    "id": "memoria",
+    "name": "Memória de trabalho",
+    "description": "Manter e manipular informações por poucos segundos depois que elas deixam de estar visíveis.",
+    "construct": "Memória de trabalho (armazenamento e manipulação breve, Gwm)",
+    "practice": ["Repetir sequências de dígitos na ordem inversa", "Agrupar itens em blocos de 3 ou 4 (chunking)", "Exercícios do tipo n-back, sabendo que o ganho tende a ser específico da tarefa"],
+    "sortOrder": 9
+  },
+  {
+    "id": "quantitativo",
+    "name": "Raciocínio quantitativo",
+    "description": "Aplicar proporções, porcentagens, médias e taxas para resolver problemas numéricos.",
+    "construct": "Raciocínio quantitativo aplicado (Gq/Gf-quantitativo)",
+    "practice": ["Revisar porcentagens compostas (aumentos e descontos sucessivos)", "Resolver problemas de taxa com a fórmula trabalho = taxa × tempo", "Estimar a ordem de grandeza da resposta antes de calcular"],
+    "sortOrder": 10
+  }
+]

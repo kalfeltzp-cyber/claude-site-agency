@@ -1,0 +1,73 @@
+{
+  "category": "problemas",
+  "defaults": {
+    "status": "reviewed",
+    "quality": { "reviewStatus": "author_reviewed", "reviewedAt": "2026-10-29", "notes": "Solução verificada por enumeração ou cálculo direto. Sem calibração empírica.", "empiricallyCalibrated": false }
+  },
+  "questions": [
+    {
+      "id": "prb-001", "difficulty": 1, "format": "text", "recommendedSeconds": 35,
+      "prompt": "Uma reunião começa às 14h40 e dura 1 hora e 35 minutos. A que horas ela termina?",
+      "options": [{"id":"a","text":"15h55"},{"id":"b","text":"16h05"},{"id":"c","text":"16h15"},{"id":"d","text":"16h25"},{"id":"e","text":"16h35"}],
+      "answer": "c",
+      "explanation": "14h40 + 1h = 15h40; 15h40 + 35 min = 16h15.",
+      "rationale": "Aritmética de tempo em base sexagesimal."
+    },
+    {
+      "id": "prb-002", "difficulty": 1, "format": "text", "recommendedSeconds": 35,
+      "prompt": "Você tem uma corda de 12 metros e precisa cortá-la em pedaços de 1,5 metro. Quantos pedaços inteiros desse tamanho consegue obter?",
+      "options": [{"id":"a","text":"6"},{"id":"b","text":"7"},{"id":"c","text":"8"},{"id":"d","text":"9"},{"id":"e","text":"10"}],
+      "answer": "c",
+      "explanation": "12 ÷ 1,5 = 8 pedaços exatos, sem sobra.",
+      "rationale": "Divisão com decimal em contexto prático."
+    },
+    {
+      "id": "prb-003", "difficulty": 2, "format": "text", "recommendedSeconds": 60,
+      "prompt": "Um caracol está no fundo de um poço de 10 metros. A cada dia ele sobe 3 metros e, a cada noite, escorrega 2 metros. Em que dia ele chega ao topo do poço?",
+      "options": [{"id":"a","text":"No 7º dia"},{"id":"b","text":"No 8º dia"},{"id":"c","text":"No 9º dia"},{"id":"d","text":"No 10º dia"},{"id":"e","text":"No 11º dia"}],
+      "answer": "b",
+      "explanation": "Ao fim de cada noite, ele avança 1 metro líquido. Após 7 noites, está a 7 metros. No 8º dia, sobe 3 metros e atinge 10 metros, saindo antes de escorregar.",
+      "rationale": "Exige perceber que o último dia não é seguido de escorregão; distrator 10º dia vem de 10 ÷ 1."
+    },
+    {
+      "id": "prb-004", "difficulty": 2, "format": "text", "recommendedSeconds": 50,
+      "prompt": "Seis pessoas se cumprimentam com um aperto de mão, e cada par de pessoas se cumprimenta exatamente uma vez. Quantos apertos de mão ocorrem no total?",
+      "options": [{"id":"a","text":"12"},{"id":"b","text":"15"},{"id":"c","text":"18"},{"id":"d","text":"30"},{"id":"e","text":"36"}],
+      "answer": "b",
+      "explanation": "Número de pares: 6 × 5 ÷ 2 = 15. Divide-se por 2 porque o aperto entre A e B é o mesmo que entre B e A.",
+      "rationale": "Combinação de 6 elementos tomados 2 a 2; distrator 30 omite a divisão por 2."
+    },
+    {
+      "id": "prb-005", "difficulty": 2, "format": "text", "recommendedSeconds": 50,
+      "prompt": "Um relógio adianta 2 minutos a cada hora. Ele foi acertado exatamente ao meio-dia. Que horário ele mostrará quando o horário correto for 18h?",
+      "options": [{"id":"a","text":"17h48"},{"id":"b","text":"18h06"},{"id":"c","text":"18h10"},{"id":"d","text":"18h12"},{"id":"e","text":"18h20"}],
+      "answer": "d",
+      "explanation": "Do meio-dia às 18h passam 6 horas; 6 × 2 = 12 minutos de adiantamento. O relógio mostrará 18h12.",
+      "rationale": "Taxa constante ao longo do tempo; distrator 17h48 confunde adiantar com atrasar."
+    },
+    {
+      "id": "prb-006", "difficulty": 2, "format": "text", "recommendedSeconds": 55,
+      "prompt": "Em um torneio de eliminação simples com 32 jogadores, cada partida elimina exatamente um jogador e não há empates. Quantas partidas são necessárias para definir o campeão?",
+      "options": [{"id":"a","text":"16"},{"id":"b","text":"31"},{"id":"c","text":"32"},{"id":"d","text":"63"},{"id":"e","text":"64"}],
+      "answer": "b",
+      "explanation": "Para restar 1 campeão, 31 jogadores precisam ser eliminados, e cada partida elimina exatamente 1. Conferência por rodadas: 16 + 8 + 4 + 2 + 1 = 31.",
+      "rationale": "Problema resolvido por invariante; o cálculo por rodadas confirma."
+    },
+    {
+      "id": "prb-007", "difficulty": 3, "format": "text", "recommendedSeconds": 80,
+      "prompt": "Um livro tem as páginas numeradas de 1 a 120. Quantas vezes o algarismo 7 aparece, ao todo, nessa numeração?",
+      "options": [{"id":"a","text":"12"},{"id":"b","text":"20"},{"id":"c","text":"21"},{"id":"d","text":"22"},{"id":"e","text":"23"}],
+      "answer": "d",
+      "explanation": "Na casa das unidades: 7, 17, 27, …, 117 → 12 ocorrências. Na casa das dezenas: 70 a 79 → 10 ocorrências. Total: 22 (o número 77 contribui com uma ocorrência em cada contagem, o que está correto, pois tem dois algarismos 7).",
+      "rationale": "Contagem sistemática por posição; distrator 21 conta o 77 apenas uma vez."
+    },
+    {
+      "id": "prb-008", "difficulty": 3, "format": "text", "recommendedSeconds": 80,
+      "prompt": "Há 9 moedas de aparência idêntica; uma delas é mais pesada que as outras, que têm todas o mesmo peso. Usando uma balança de dois pratos (sem pesos de referência), qual é o número mínimo de pesagens que GARANTE identificar a moeda mais pesada?",
+      "options": [{"id":"a","text":"1"},{"id":"b","text":"2"},{"id":"c","text":"3"},{"id":"d","text":"4"},{"id":"e","text":"8"}],
+      "answer": "b",
+      "explanation": "Divida em 3 grupos de 3 e compare dois grupos: o mais pesado, ou o que ficou de fora em caso de equilíbrio, contém a moeda. Repita com as 3 moedas desse grupo (compare 2 delas). Cada pesagem tem 3 resultados, e 3² = 9 cobre todos os casos; 1 pesagem distingue no máximo 3 casos, o que é insuficiente.",
+      "rationale": "Problema de busca ternária; mínimo justificado pelo limite informacional."
+    }
+  ]
+}

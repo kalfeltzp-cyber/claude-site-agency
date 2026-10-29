@@ -1,0 +1,260 @@
+[
+  {
+    "id": "aera-2014",
+    "authors": "American Educational Research Association, American Psychological Association & National Council on Measurement in Education",
+    "year": 2014,
+    "title": "Standards for Educational and Psychological Testing",
+    "source": "Washington, DC: AERA",
+    "url": "https://www.testingstandards.net/",
+    "topic": "Padrões de testagem",
+    "usedFor": "Critérios de validade, confiabilidade, normas e uso apropriado de escores que orientam as limitações declaradas da plataforma."
+  },
+  {
+    "id": "itc-2001",
+    "authors": "International Test Commission",
+    "year": 2001,
+    "title": "International Guidelines for Test Use",
+    "source": "International Journal of Testing, 1(2), 93–114",
+    "url": "https://www.intestcom.org/",
+    "topic": "Diretrizes internacionais",
+    "usedFor": "Responsabilidades de quem desenvolve e usa testes; comunicação de resultados."
+  },
+  {
+    "id": "itc-2006",
+    "authors": "International Test Commission",
+    "year": 2006,
+    "title": "International Guidelines on Computer-Based and Internet-Delivered Testing",
+    "source": "International Journal of Testing, 6(2), 143–171",
+    "url": "https://www.intestcom.org/",
+    "topic": "Testagem on-line",
+    "usedFor": "Segurança, controle de administração não supervisionada e proteção de dados em testes pela internet."
+  },
+  {
+    "id": "itc-2018",
+    "authors": "International Test Commission",
+    "year": 2018,
+    "title": "ITC Guidelines for Translating and Adapting Tests (Second Edition)",
+    "source": "International Journal of Testing, 18(2), 101–134",
+    "doi": "10.1080/15305058.2017.1398166",
+    "url": "https://doi.org/10.1080/15305058.2017.1398166",
+    "topic": "Adaptação de testes",
+    "usedFor": "Base para a futura oferta em outros idiomas: tradução não basta, é preciso reavaliar equivalência e normas."
+  },
+  {
+    "id": "cfp-2022",
+    "authors": "Conselho Federal de Psicologia",
+    "year": 2022,
+    "title": "Resolução CFP nº 31, de 15 de dezembro de 2022 — diretrizes para a avaliação psicológica e regulamentação do SATEPSI",
+    "source": "Conselho Federal de Psicologia (Brasil)",
+    "url": "https://satepsi.cfp.org.br/",
+    "topic": "Regulação brasileira",
+    "usedFor": "Explica por que esta plataforma não é um teste psicológico aprovado pelo SATEPSI e não substitui avaliação feita por psicólogo."
+  },
+  {
+    "id": "neisser-1996",
+    "authors": "Neisser, U., Boodoo, G., Bouchard, T. J., Jr., Boykin, A. W., Brody, N., Ceci, S. J., Halpern, D. F., Loehlin, J. C., Perloff, R., Sternberg, R. J., & Urbina, S.",
+    "year": 1996,
+    "title": "Intelligence: Knowns and unknowns",
+    "source": "American Psychologist, 51(2), 77–101",
+    "doi": "10.1037/0003-066X.51.2.77",
+    "url": "https://doi.org/10.1037/0003-066X.51.2.77",
+    "topic": "Inteligência",
+    "usedFor": "Relatório da força-tarefa da APA sobre o que se sabe e o que não se sabe sobre inteligência e testes de QI."
+  },
+  {
+    "id": "nisbett-2012",
+    "authors": "Nisbett, R. E., Aronson, J., Blair, C., Dickens, W., Flynn, J., Halpern, D. F., & Turkheimer, E.",
+    "year": 2012,
+    "title": "Intelligence: New findings and theoretical developments",
+    "source": "American Psychologist, 67(2), 130–159",
+    "doi": "10.1037/a0026699",
+    "url": "https://doi.org/10.1037/a0026699",
+    "topic": "Inteligência",
+    "usedFor": "Atualização das evidências sobre inteligência, incluindo influências ambientais e limites de interpretação."
+  },
+  {
+    "id": "deary-2012",
+    "authors": "Deary, I. J.",
+    "year": 2012,
+    "title": "Intelligence",
+    "source": "Annual Review of Psychology, 63, 453–482",
+    "doi": "10.1146/annurev-psych-120710-100353",
+    "url": "https://doi.org/10.1146/annurev-psych-120710-100353",
+    "topic": "Inteligência",
+    "usedFor": "Revisão sobre estrutura das diferenças cognitivas e seus correlatos."
+  },
+  {
+    "id": "cattell-1963",
+    "authors": "Cattell, R. B.",
+    "year": 1963,
+    "title": "Theory of fluid and crystallized intelligence: A critical experiment",
+    "source": "Journal of Educational Psychology, 54(1), 1–22",
+    "doi": "10.1037/h0046743",
+    "url": "https://doi.org/10.1037/h0046743",
+    "topic": "Teoria Gf–Gc",
+    "usedFor": "Distinção entre raciocínio fluido (itens abstratos, numéricos e lógicos) e conhecimento cristalizado (analogias verbais)."
+  },
+  {
+    "id": "carroll-1993",
+    "authors": "Carroll, J. B.",
+    "year": 1993,
+    "title": "Human Cognitive Abilities: A Survey of Factor-Analytic Studies",
+    "source": "Cambridge University Press",
+    "doi": "10.1017/CBO9780511571312",
+    "url": "https://doi.org/10.1017/CBO9780511571312",
+    "topic": "Estrutura das habilidades",
+    "usedFor": "Modelo hierárquico de habilidades que fundamenta a organização das categorias."
+  },
+  {
+    "id": "mcgrew-2009",
+    "authors": "McGrew, K. S.",
+    "year": 2009,
+    "title": "CHC theory and the human cognitive abilities project: Standing on the shoulders of the giants of psychometric intelligence research",
+    "source": "Intelligence, 37(1), 1–10",
+    "doi": "10.1016/j.intell.2008.08.004",
+    "url": "https://doi.org/10.1016/j.intell.2008.08.004",
+    "topic": "Modelo CHC",
+    "usedFor": "Taxonomia Cattell–Horn–Carroll usada para nomear os construtos (Gf, Gc, Gv, Gwm, Gq)."
+  },
+  {
+    "id": "carpenter-1990",
+    "authors": "Carpenter, P. A., Just, M. A., & Shell, P.",
+    "year": 1990,
+    "title": "What one intelligence test measures: A theoretical account of the processing in the Raven Progressive Matrices Test",
+    "source": "Psychological Review, 97(3), 404–431",
+    "doi": "10.1037/0033-295X.97.3.404",
+    "url": "https://doi.org/10.1037/0033-295X.97.3.404",
+    "topic": "Matrizes figurais",
+    "usedFor": "Tipos de regra (progressão, distribuição de três valores, adição) usados para construir itens originais de raciocínio abstrato."
+  },
+  {
+    "id": "shepard-1971",
+    "authors": "Shepard, R. N., & Metzler, J.",
+    "year": 1971,
+    "title": "Mental rotation of three-dimensional objects",
+    "source": "Science, 171(3972), 701–703",
+    "doi": "10.1126/science.171.3972.701",
+    "url": "https://doi.org/10.1126/science.171.3972.701",
+    "topic": "Rotação mental",
+    "usedFor": "Paradigma de discriminação entre figuras giradas e espelhadas nos itens espaciais."
+  },
+  {
+    "id": "baddeley-2003",
+    "authors": "Baddeley, A.",
+    "year": 2003,
+    "title": "Working memory: Looking back and looking forward",
+    "source": "Nature Reviews Neuroscience, 4(10), 829–839",
+    "doi": "10.1038/nrn1201",
+    "url": "https://doi.org/10.1038/nrn1201",
+    "topic": "Memória de trabalho",
+    "usedFor": "Definição de memória de trabalho como armazenamento e manipulação temporária."
+  },
+  {
+    "id": "cowan-2001",
+    "authors": "Cowan, N.",
+    "year": 2001,
+    "title": "The magical number 4 in short-term memory: A reconsideration of mental storage capacity",
+    "source": "Behavioral and Brain Sciences, 24(1), 87–114",
+    "doi": "10.1017/S0140525X01003922",
+    "url": "https://doi.org/10.1017/S0140525X01003922",
+    "topic": "Memória de trabalho",
+    "usedFor": "Capacidade limitada de retenção, que orienta o tamanho dos estímulos (4 a 7 elementos)."
+  },
+  {
+    "id": "miller-1956",
+    "authors": "Miller, G. A.",
+    "year": 1956,
+    "title": "The magical number seven, plus or minus two: Some limits on our capacity for processing information",
+    "source": "Psychological Review, 63(2), 81–97",
+    "doi": "10.1037/h0043158",
+    "url": "https://doi.org/10.1037/h0043158",
+    "topic": "Memória de curto prazo",
+    "usedFor": "Referência histórica sobre limites de span e agrupamento (chunking)."
+  },
+  {
+    "id": "cronbach-1951",
+    "authors": "Cronbach, L. J.",
+    "year": 1951,
+    "title": "Coefficient alpha and the internal structure of tests",
+    "source": "Psychometrika, 16(3), 297–334",
+    "doi": "10.1007/BF02310555",
+    "url": "https://doi.org/10.1007/BF02310555",
+    "topic": "Confiabilidade",
+    "usedFor": "Estimativa de consistência interna a ser calculada quando houver formas fixas com amostra suficiente."
+  },
+  {
+    "id": "kuder-1937",
+    "authors": "Kuder, G. F., & Richardson, M. W.",
+    "year": 1937,
+    "title": "The theory of the estimation of test reliability",
+    "source": "Psychometrika, 2(3), 151–160",
+    "doi": "10.1007/BF02288391",
+    "url": "https://doi.org/10.1007/BF02288391",
+    "topic": "Confiabilidade",
+    "usedFor": "KR-20 para itens dicotômicos (certo/errado)."
+  },
+  {
+    "id": "rasch-1960",
+    "authors": "Rasch, G.",
+    "year": 1960,
+    "title": "Probabilistic Models for Some Intelligence and Attainment Tests",
+    "source": "Copenhagen: Danish Institute for Educational Research (ed. ampliada: University of Chicago Press, 1980)",
+    "url": "https://www.rasch.org/",
+    "topic": "Teoria de resposta ao item",
+    "usedFor": "Modelo logístico de um parâmetro implementado (inativo) para futura calibração."
+  },
+  {
+    "id": "embretson-2000",
+    "authors": "Embretson, S. E., & Reise, S. P.",
+    "year": 2000,
+    "title": "Item Response Theory for Psychologists",
+    "source": "Mahwah, NJ: Lawrence Erlbaum Associates",
+    "doi": "10.4324/9781410605269",
+    "url": "https://doi.org/10.4324/9781410605269",
+    "topic": "Teoria de resposta ao item",
+    "usedFor": "Modelos 1PL/2PL, estimação de habilidade e requisitos de calibração."
+  },
+  {
+    "id": "messick-1995",
+    "authors": "Messick, S.",
+    "year": 1995,
+    "title": "Validity of psychological assessment: Validation of inferences from persons' responses and performances as scientific inquiry into score meaning",
+    "source": "American Psychologist, 50(9), 741–749",
+    "doi": "10.1037/0003-066X.50.9.741",
+    "url": "https://doi.org/10.1037/0003-066X.50.9.741",
+    "topic": "Validade",
+    "usedFor": "Validade como propriedade das interpretações de escores, não do teste em si."
+  },
+  {
+    "id": "haladyna-2002",
+    "authors": "Haladyna, T. M., Downing, S. M., & Rodriguez, M. C.",
+    "year": 2002,
+    "title": "A review of multiple-choice item-writing guidelines for classroom assessment",
+    "source": "Applied Measurement in Education, 15(3), 309–333",
+    "doi": "10.1207/S15324818AME1503_5",
+    "url": "https://doi.org/10.1207/S15324818AME1503_5",
+    "topic": "Construção de itens",
+    "usedFor": "Diretrizes de redação de itens de múltipla escolha e distratores plausíveis."
+  },
+  {
+    "id": "flynn-1987",
+    "authors": "Flynn, J. R.",
+    "year": 1987,
+    "title": "Massive IQ gains in 14 nations: What IQ tests really measure",
+    "source": "Psychological Bulletin, 101(2), 171–191",
+    "doi": "10.1037/0033-2909.101.2.171",
+    "url": "https://doi.org/10.1037/0033-2909.101.2.171",
+    "topic": "Normas",
+    "usedFor": "Por que normas envelhecem e precisam ser específicas de população e época."
+  },
+  {
+    "id": "lgpd-2018",
+    "authors": "Brasil",
+    "year": 2018,
+    "title": "Lei nº 13.709, de 14 de agosto de 2018 — Lei Geral de Proteção de Dados Pessoais (LGPD)",
+    "source": "Diário Oficial da União",
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm",
+    "topic": "Privacidade",
+    "usedFor": "Base legal do tratamento de dados, direitos do titular e exclusão de conta."
+  }
+]

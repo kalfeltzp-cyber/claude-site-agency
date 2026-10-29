@@ -1,0 +1,72 @@
+{
+  "category": "memoria",
+  "defaults": {
+    "status": "reviewed",
+    "quality": { "reviewStatus": "author_reviewed", "reviewedAt": "2026-10-29", "notes": "Procedimento: o estímulo é exibido uma única vez, por tempo fixo controlado pelo servidor, e só depois a pergunta aparece. Não é possível impedir anotações externas em ambiente on-line não supervisionado. Sem calibração empírica.", "empiricallyCalibrated": false }
+  },
+  "questions": [
+    {
+      "id": "mem-001", "difficulty": 1, "format": "memory", "recommendedSeconds": 30,
+      "stimulus": {"text": "7  2  9  4", "exposureSeconds": 6},
+      "prompt": "Qual era o TERCEIRO número da sequência?",
+      "options": [{"id":"a","text":"2"},{"id":"b","text":"4"},{"id":"c","text":"5"},{"id":"d","text":"7"},{"id":"e","text":"9"}],
+      "answer": "e",
+      "explanation": "A sequência era 7, 2, 9, 4. O terceiro número é 9.",
+      "rationale": "Retenção serial de 4 dígitos com recuperação por posição."
+    },
+    {
+      "id": "mem-002", "difficulty": 1, "format": "memory", "recommendedSeconds": 30,
+      "stimulus": {"text": "SOL · MESA · RIO · LÁPIS · NUVEM", "exposureSeconds": 8},
+      "prompt": "Qual destas palavras NÃO estava na lista?",
+      "options": [{"id":"a","text":"MESA"},{"id":"b","text":"RIO"},{"id":"c","text":"PORTA"},{"id":"d","text":"NUVEM"},{"id":"e","text":"SOL"}],
+      "answer": "c",
+      "explanation": "A lista era SOL, MESA, RIO, LÁPIS e NUVEM. PORTA não estava presente.",
+      "rationale": "Reconhecimento de itens verbais após breve retenção."
+    },
+    {
+      "id": "mem-003", "difficulty": 2, "format": "memory", "recommendedSeconds": 40,
+      "stimulus": {"text": "5  8  1  6  3", "exposureSeconds": 8},
+      "prompt": "Qual alternativa mostra a sequência na ORDEM INVERSA?",
+      "options": [{"id":"a","text":"3 6 1 8 5"},{"id":"b","text":"3 6 8 1 5"},{"id":"c","text":"3 1 6 8 5"},{"id":"d","text":"6 3 1 8 5"},{"id":"e","text":"5 8 1 6 3"}],
+      "answer": "a",
+      "explanation": "Sequência original: 5, 8, 1, 6, 3. Invertida: 3, 6, 1, 8, 5.",
+      "rationale": "Adaptação de reconhecimento do paradigma de span de dígitos em ordem inversa (manipulação, não apenas retenção)."
+    },
+    {
+      "id": "mem-004", "difficulty": 2, "format": "memory", "recommendedSeconds": 40,
+      "stimulus": {"text": "B7 · K2 · M9 · D4 · R1", "exposureSeconds": 10},
+      "prompt": "Qual número estava associado à letra M?",
+      "options": [{"id":"a","text":"1"},{"id":"b","text":"2"},{"id":"c","text":"4"},{"id":"d","text":"7"},{"id":"e","text":"9"}],
+      "answer": "e",
+      "explanation": "Os pares eram B7, K2, M9, D4 e R1. A letra M estava associada ao 9.",
+      "rationale": "Memória de associações (vinculação letra–número)."
+    },
+    {
+      "id": "mem-005", "difficulty": 3, "format": "memory", "recommendedSeconds": 45,
+      "stimulus": {"text": "4  9  2  7  5  1", "exposureSeconds": 10},
+      "prompt": "Qual é a SOMA do segundo com o quinto número da sequência?",
+      "options": [{"id":"a","text":"11"},{"id":"b","text":"12"},{"id":"c","text":"13"},{"id":"d","text":"14"},{"id":"e","text":"16"}],
+      "answer": "d",
+      "explanation": "Sequência: 4, 9, 2, 7, 5, 1. O segundo número é 9 e o quinto é 5; 9 + 5 = 14.",
+      "rationale": "Retenção de 6 dígitos com operação sobre posições específicas."
+    },
+    {
+      "id": "mem-006", "difficulty": 3, "format": "memory", "recommendedSeconds": 45,
+      "stimulus": {"text": "T 3 A 8 F 1 L 6", "exposureSeconds": 10},
+      "prompt": "Colocando apenas as LETRAS da sequência em ordem alfabética, qual letra fica em terceiro lugar?",
+      "options": [{"id":"a","text":"A"},{"id":"b","text":"F"},{"id":"c","text":"L"},{"id":"d","text":"R"},{"id":"e","text":"T"}],
+      "answer": "c",
+      "explanation": "As letras eram T, A, F e L. Em ordem alfabética: A, F, L, T. A terceira é L.",
+      "rationale": "Inspirado no paradigma de sequenciamento letra–número: exige reordenar o conteúdo retido."
+    },
+    {
+      "id": "mem-007", "difficulty": 3, "format": "memory", "recommendedSeconds": 45,
+      "stimulus": {"text": "8  3  6  2  9  4  7", "exposureSeconds": 12},
+      "prompt": "Quantos números da sequência eram MAIORES que 5?",
+      "options": [{"id":"a","text":"2"},{"id":"b","text":"3"},{"id":"c","text":"4"},{"id":"d","text":"5"},{"id":"e","text":"6"}],
+      "answer": "c",
+      "explanation": "Sequência: 8, 3, 6, 2, 9, 4, 7. Maiores que 5: 8, 6, 9 e 7 — quatro números.",
+      "rationale": "Retenção de 7 dígitos com classificação posterior."
+    }
+  ]
+}

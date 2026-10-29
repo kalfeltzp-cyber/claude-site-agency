@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tokens de cor (valores RGB para permitir opacidade). Tema escuro é o padrão. */
+:root,
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: 8 12 22;
+  --surface: 15 21 36;
+  --surface-2: 22 30 50;
+  --line: 40 52 78;
+  --ink: 236 240 248;
+  --muted: 160 172 196;
+  --faint: 128 140 166;
+  --accent: 96 156 255;
+  --accent-ink: 6 14 32;
+  --violet: 160 140 255;
+  --good: 52 196 120;
+  --bad: 240 104 104;
+  --warn: 245 184 72;
+  --series: 57 135 229;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: 247 248 251;
+  --surface: 255 255 255;
+  --surface-2: 240 243 249;
+  --line: 218 224 236;
+  --ink: 14 20 36;
+  --muted: 74 86 112;
+  --faint: 98 108 132;
+  --accent: 36 96 214;
+  --accent-ink: 255 255 255;
+  --violet: 98 80 214;
+  --good: 0 128 60;
+  --bad: 196 40 40;
+  --warn: 160 100 0;
+  --series: 42 120 214;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: rgb(var(--bg));
+  color: rgb(var(--ink));
+  font-feature-settings: "ss01", "cv11";
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(rgb(var(--line) / 0.35) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(var(--line) / 0.35) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, black 30%, transparent 75%);
+}
+
+.hero-glow {
+  background:
+    radial-gradient(600px 300px at 20% 0%, rgb(var(--accent) / 0.18), transparent 70%),
+    radial-gradient(500px 280px at 85% 10%, rgb(var(--violet) / 0.14), transparent 70%);
+}
+
+:focus-visible {
+  outline: 2px solid rgb(var(--accent));
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+dialog::backdrop {
+  background: rgb(0 0 0 / 0.55);
+  backdrop-filter: blur(2px);
+}
+
+.prose-cognis p,
+.prose-cognis li {
+  color: rgb(var(--muted));
+  line-height: 1.75;
+}
+.prose-cognis h2 {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  line-height: 1.2;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  color: rgb(var(--ink));
+}
+.prose-cognis h3 {
+  font-weight: 600;
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: rgb(var(--ink));
+}
+.prose-cognis ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+.prose-cognis ol {
+  list-style: decimal;
+  padding-left: 1.25rem;
+}
+.prose-cognis li + li {
+  margin-top: 0.35rem;
+}
+.prose-cognis a {
+  color: rgb(var(--accent));
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.prose-cognis strong {
+  color: rgb(var(--ink));
+}
+.prose-cognis code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: rgb(var(--surface-2));
+  padding: 0.1rem 0.35rem;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media print {
+  :root,
+  :root[data-theme="dark"] {
+    color-scheme: light;
+    --bg: 255 255 255;
+    --surface: 255 255 255;
+    --surface-2: 245 245 245;
+    --line: 210 210 210;
+    --ink: 0 0 0;
+    --muted: 50 50 50;
+    --faint: 90 90 90;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

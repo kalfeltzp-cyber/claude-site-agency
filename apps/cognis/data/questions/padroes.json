@@ -1,0 +1,100 @@
+{
+  "category": "padroes",
+  "defaults": {
+    "status": "reviewed",
+    "quality": { "reviewStatus": "author_reviewed", "reviewedAt": "2026-10-29", "notes": "Regras verificadas termo a termo; alfabeto de 26 letras declarado quando relevante. Sem calibração empírica.", "empiricallyCalibrated": false }
+  },
+  "questions": [
+    {
+      "id": "pad-001", "difficulty": 1, "format": "text", "recommendedSeconds": 30,
+      "prompt": "Qual letra completa a sequência?\nA, C, E, G, ?",
+      "options": [{"id":"a","text":"H"},{"id":"b","text":"I"},{"id":"c","text":"J"},{"id":"d","text":"K"},{"id":"e","text":"L"}],
+      "answer": "b",
+      "explanation": "A sequência pula uma letra a cada passo (A, _B_, C, _D_, E, _F_, G, _H_): a próxima é I.",
+      "rationale": "Salto constante no alfabeto."
+    },
+    {
+      "id": "pad-002", "difficulty": 1, "format": "sequence", "recommendedSeconds": 30,
+      "prompt": "Qual figura continua a sequência?",
+      "figure": {"sequence": [
+        {"shape":"arrow","fill":"solid","rotation":0},{"shape":"arrow","fill":"solid","rotation":90},{"shape":"arrow","fill":"solid","rotation":180},{"shape":"arrow","fill":"solid","rotation":270}
+      ]},
+      "options": [
+        {"id":"a","figure":{"shape":"arrow","fill":"solid","rotation":0}},
+        {"id":"b","figure":{"shape":"arrow","fill":"solid","rotation":45}},
+        {"id":"c","figure":{"shape":"arrow","fill":"solid","rotation":90}},
+        {"id":"d","figure":{"shape":"arrow","fill":"solid","rotation":180}},
+        {"id":"e","figure":{"shape":"arrow","fill":"solid","rotation":270}}
+      ],
+      "answer": "a",
+      "explanation": "A seta gira 90° no sentido horário a cada passo: cima, direita, baixo, esquerda. A próxima volta a apontar para cima.",
+      "rationale": "Rotação cíclica simples."
+    },
+    {
+      "id": "pad-003", "difficulty": 2, "format": "text", "recommendedSeconds": 50,
+      "prompt": "Qual letra completa a sequência? (Considere o alfabeto de 26 letras, de A a Z.)\nB, E, I, N, ?",
+      "options": [{"id":"a","text":"R"},{"id":"b","text":"S"},{"id":"c","text":"T"},{"id":"d","text":"U"},{"id":"e","text":"V"}],
+      "answer": "c",
+      "explanation": "Posições no alfabeto: B = 2, E = 5, I = 9, N = 14. Os saltos são +3, +4, +5; o próximo é +6: 14 + 6 = 20 = T.",
+      "rationale": "Saltos crescentes no alfabeto (diferenças de segunda ordem constantes)."
+    },
+    {
+      "id": "pad-004", "difficulty": 2, "format": "text", "recommendedSeconds": 45,
+      "prompt": "Qual par completa a sequência?\nAZ, BY, CX, DW, ?",
+      "options": [{"id":"a","text":"EU"},{"id":"b","text":"EV"},{"id":"c","text":"FV"},{"id":"d","text":"EW"},{"id":"e","text":"FU"}],
+      "answer": "b",
+      "explanation": "A primeira letra avança no alfabeto (A, B, C, D, E) e a segunda recua a partir do fim (Z, Y, X, W, V). O próximo par é EV.",
+      "rationale": "Duas séries simultâneas em direções opostas."
+    },
+    {
+      "id": "pad-005", "difficulty": 2, "format": "sequence", "recommendedSeconds": 45,
+      "prompt": "Qual figura continua a sequência?",
+      "figure": {"sequence": [
+        {"shape":"circle","fill":"outline","count":1},{"shape":"circle","fill":"solid","count":2},{"shape":"circle","fill":"outline","count":3},{"shape":"circle","fill":"solid","count":4}
+      ]},
+      "options": [
+        {"id":"a","figure":{"shape":"circle","fill":"solid","count":5}},
+        {"id":"b","figure":{"shape":"circle","fill":"outline","count":5}},
+        {"id":"c","figure":{"shape":"circle","fill":"outline","count":4}},
+        {"id":"d","figure":{"shape":"circle","fill":"outline","count":6}},
+        {"id":"e","figure":{"shape":"circle","fill":"solid","count":6}}
+      ],
+      "answer": "b",
+      "explanation": "A quantidade aumenta 1 a cada passo e o preenchimento alterna entre vazado e sólido. O próximo é 5 círculos vazados.",
+      "rationale": "Duas regras (progressão e alternância)."
+    },
+    {
+      "id": "pad-006", "difficulty": 2, "format": "text", "recommendedSeconds": 50,
+      "prompt": "Qual grupo completa a sequência?\nACB, DFE, GIH, ?",
+      "options": [{"id":"a","text":"JKL"},{"id":"b","text":"JLK"},{"id":"c","text":"KJL"},{"id":"d","text":"KML"},{"id":"e","text":"LJK"}],
+      "answer": "b",
+      "explanation": "Cada grupo usa três letras consecutivas na ordem 1ª, 3ª, 2ª: A-C-B, D-F-E, G-I-H. O próximo usa J, K, L na mesma ordem: J-L-K.",
+      "rationale": "Padrão de permutação interna aplicado a blocos consecutivos."
+    },
+    {
+      "id": "pad-007", "difficulty": 3, "format": "text", "recommendedSeconds": 60,
+      "prompt": "Qual elemento completa a sequência? (Considere o alfabeto de 26 letras.)\n2A, 4D, 8G, 16J, ?",
+      "options": [{"id":"a","text":"32K"},{"id":"b","text":"32L"},{"id":"c","text":"32M"},{"id":"d","text":"30M"},{"id":"e","text":"64M"}],
+      "answer": "c",
+      "explanation": "Os números dobram (2, 4, 8, 16, 32) e as letras avançam 3 posições (A, D, G, J, M). Resposta: 32M.",
+      "rationale": "Duas regras independentes em domínios diferentes (numérico e alfabético)."
+    },
+    {
+      "id": "pad-008", "difficulty": 3, "format": "sequence", "recommendedSeconds": 70,
+      "prompt": "Qual figura continua a sequência?",
+      "figure": {"sequence": [
+        {"shape":"arrow","fill":"solid","rotation":0,"count":1},{"shape":"arrow","fill":"solid","rotation":45,"count":2},{"shape":"arrow","fill":"solid","rotation":90,"count":1},{"shape":"arrow","fill":"solid","rotation":135,"count":2}
+      ]},
+      "options": [
+        {"id":"a","figure":{"shape":"arrow","fill":"solid","rotation":180,"count":2}},
+        {"id":"b","figure":{"shape":"arrow","fill":"solid","rotation":135,"count":1}},
+        {"id":"c","figure":{"shape":"arrow","fill":"solid","rotation":180,"count":1}},
+        {"id":"d","figure":{"shape":"arrow","fill":"solid","rotation":225,"count":1}},
+        {"id":"e","figure":{"shape":"arrow","fill":"solid","rotation":0,"count":2}}
+      ],
+      "answer": "c",
+      "explanation": "A direção gira 45° no sentido horário a cada passo (0°, 45°, 90°, 135°, 180°) e a quantidade alterna entre 1 e 2. O próximo é 1 seta apontando para baixo (180°).",
+      "rationale": "Rotação contínua combinada com alternância de quantidade."
+    }
+  ]
+}
